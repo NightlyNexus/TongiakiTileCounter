@@ -191,6 +191,12 @@ private class TileElement(
           appendText(tile.name)
         }
       } else if (tile is LandTile) {
+        appendElement("b") {
+          appendText("(")
+          appendText(tile.points.toString())
+          appendText(")")
+        }
+        appendText(" ")
         appendText(tile.name)
       }
     }
