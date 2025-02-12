@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tongiaki Tile Counter</title>
+  <link rel="shortcut icon" href="boat.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <style>
+    :root {
+      color-scheme: light only;
+    }
+
+    /* (632 - 28 - 28) / 3 */
+    #grid-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, 192px);
+      color: #000000;
+      padding-top: 20px;
+      padding-right: 28px;
+      padding-bottom: 20px;
+      padding-left: 28px;
+      grid-row-gap: 20px;
+    }
+
+    #grid-container > figure {
+      font-size: 1.5em;
+      text-align: center;
+      margin: 0;
+    }
+
+    #grid-container > figure > img {
+      width: 170px;
+    }
+
+    body {
+      margin: 0;
+      container-type: inline-size;
+    }
+
+    html {
+      background-color: #38AFCD;
+    }
+
+    #header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      padding-top: 20px;
+      padding-right: 28px;
+      padding-bottom: 20px;
+      padding-left: 28px;
+      background-color: #FFFFFFDD;
+      color: #000000;
+    }
+
+    p {
+      display: inline;
+    }
+
+    .expansion {
+      display: inline-block;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      #header {
+        background-color: #000000DD;
+        color: #FFFFFF;
+      }
+    }
+
+    @container (max-width: 632px) {
+      #grid-container {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      #grid-container > figure {
+        font-size: 3.7vw;
+      }
+
+      #grid-container > figure > img {
+        width: calc(170 / 192 * 100%);
+      }
+    }
+  </style>
+</head>
+<body>
+<div id="header">
+  <p>In pile: </p><b id="in-pile-count"></b>&nbsp;&nbsp;&nbsp;&nbsp;<p>Used: </p><b id="used-count"></b>
+  <br/><br/>
+  <input type="checkbox" id="sort-used">
+  <label for="sort-used">Move used to bottom</label>&nbsp;&nbsp;&nbsp;&nbsp;<button id="reset">Reset</button>
+</div>
+<div id="grid-container"></div>
+<script src="TongiakiTileCounter.js"></script>
+</body>
+</html>
