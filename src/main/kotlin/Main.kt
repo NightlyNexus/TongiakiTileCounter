@@ -273,8 +273,8 @@ private val allTiles = listOf(
     2
   ),
   LandTile(
-    "tiles/land/tuamoto.png",
-    "Tuamoto",
+    "tiles/land/tuamotu.png",
+    "Tuamotu",
     3,
     2
   ),
