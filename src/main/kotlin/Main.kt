@@ -18,12 +18,15 @@ fun main() {
   val allTileElements = ArrayList<TileElement>(allTiles.size)
 
   val grid = document.getElementById("grid-container")!!
-  val inPileCountDisplay = document.getElementById("in-pile-count")!!
-  val usedCountDisplay = document.getElementById("used-count")!!
+  val inPileCountDisplayLand = document.getElementById("land-in-pile-count")!!
+  val usedCountDisplayLand = document.getElementById("land-used-count")!!
+  val inPileCountDisplayWater = document.getElementById("water-in-pile-count")!!
+  val usedCountDisplayWater = document.getElementById("water-used-count")!!
   val sortUsedCheckbox = document.getElementById("sort-used") as HTMLInputElement
   val resetButton = document.getElementById("reset") as HTMLButtonElement
 
-  val shownTilesCount = ShownTilesCount(0, 0)
+  val shownTilesCountLand = ShownTilesCount(0, 0)
+  val shownTilesCountWater = ShownTilesCount(0, 0)
 
   resetButton.addEventListener("click", {
     if (window.confirm("Reset all tiles?")) {
@@ -78,6 +81,18 @@ fun main() {
           grid.appendChild(tileElementToAppend.element)
         }
       }
+      val shownTilesCount: ShownTilesCount
+      val inPileCountDisplay: Element
+      val usedCountDisplay: Element
+      if (tileElement.tile is LandTile) {
+        shownTilesCount = shownTilesCountLand
+        inPileCountDisplay = inPileCountDisplayLand
+        usedCountDisplay = usedCountDisplayLand
+      } else {
+        shownTilesCount = shownTilesCountWater
+        inPileCountDisplay = inPileCountDisplayWater
+        usedCountDisplay = usedCountDisplayWater
+      }
       if (used) {
         shownTilesCount.inPile--
         shownTilesCount.used++
@@ -88,7 +103,7 @@ fun main() {
       inPileCountDisplay.textContent = shownTilesCount.inPile.toString()
       usedCountDisplay.textContent = shownTilesCount.used.toString()
 
-      resetButton.disabled = shownTilesCount.used == 1
+      resetButton.disabled = shownTilesCountLand.used == 1 && shownTilesCountWater.used == 0
 
       tileStorage.setUsed(tileElement.ordinal, used)
     }
@@ -98,6 +113,11 @@ fun main() {
     val tile = allTiles[i]
     val isSource = tile === Tonga
     val used = isSource || tileStorage.getUsedStart(i)
+    val shownTilesCount = if (tile is LandTile) {
+      shownTilesCountLand
+    } else {
+      shownTilesCountWater
+    }
     val baseTileElement = grid.createTile(
       tile,
       i,
@@ -108,10 +128,12 @@ fun main() {
     allTileElements += baseTileElement
   }
 
-  inPileCountDisplay.textContent = shownTilesCount.inPile.toString()
-  usedCountDisplay.textContent = shownTilesCount.used.toString()
+  inPileCountDisplayLand.textContent = shownTilesCountLand.inPile.toString()
+  usedCountDisplayLand.textContent = shownTilesCountLand.used.toString()
+  inPileCountDisplayWater.textContent = shownTilesCountWater.inPile.toString()
+  usedCountDisplayWater.textContent = shownTilesCountWater.used.toString()
 
-  resetButton.disabled = shownTilesCount.used == 1
+  resetButton.disabled = shownTilesCountLand.used == 1 && shownTilesCountWater.used == 0
 
   // This does not call sortUsedCheckbox's change event listener, so we have to do an initial sort.
   sortUsedCheckbox.checked = sortUsed
