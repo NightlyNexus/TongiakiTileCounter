@@ -37,8 +37,7 @@ fun main() {
           }
         }
       }
-
-      resetButton.disabled = true
+      check(resetButton.disabled)
     }
   })
 
