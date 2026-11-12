@@ -2,7 +2,7 @@ https://nightlynexus.github.io/TongiakiTileCounter/
 
 Mark Tongiaki tiles as used as you play, so you know what is still in the deck.
 
-![webpage example](webpage_example.png)
+![webpage example](webpage_example.webp)
 
 License
 --------
