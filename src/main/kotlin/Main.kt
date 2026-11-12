@@ -225,7 +225,7 @@ private class TileElement(
 }
 
 private val Tonga = LandTile(
-  "tiles/land/tonga.png",
+  "tiles/land/tonga.webp",
   "Tonga",
   0,
   6
@@ -234,157 +234,157 @@ private val Tonga = LandTile(
 private val allTiles = listOf(
   Tonga,
   LandTile(
-    "tiles/land/fidschi.png",
+    "tiles/land/fidschi.webp",
     "Fidschi",
     5,
     3
   ),
   LandTile(
-    "tiles/land/samoa.png",
+    "tiles/land/samoa.webp",
     "Samoa",
     5,
     3
   ),
   LandTile(
-    "tiles/land/hawaii.png",
+    "tiles/land/hawaii.webp",
     "Hawaii",
     5,
     3
   ),
   LandTile(
-    "tiles/land/oahu.png",
+    "tiles/land/oahu.webp",
     "Oahu",
     4,
     3
   ),
   LandTile(
-    "tiles/land/hiva_oa.png",
+    "tiles/land/hiva_oa.webp",
     "Hiva Oa",
     4,
     3
   ),
   LandTile(
-    "tiles/land/tuvalu.png",
+    "tiles/land/tuvalu.webp",
     "Tuvalu",
     4,
     3
   ),
   LandTile(
-    "tiles/land/mangareva.png",
+    "tiles/land/mangareva.webp",
     "Mangareva",
     4,
     3
   ),
   LandTile(
-    "tiles/land/tahiti.png",
+    "tiles/land/tahiti.webp",
     "Tahiti",
     4,
     3
   ),
   LandTile(
-    "tiles/land/tokelau.png",
+    "tiles/land/tokelau.webp",
     "Tokelau",
     3,
     3
   ),
   LandTile(
-    "tiles/land/rapa_nui.png",
+    "tiles/land/rapa_nui.webp",
     "Rapa Nui",
     3,
     2
   ),
   LandTile(
-    "tiles/land/tuamotu.png",
+    "tiles/land/tuamotu.webp",
     "Tuamotu",
     3,
     2
   ),
   LandTile(
-    "tiles/land/rarotonga.png",
+    "tiles/land/rarotonga.webp",
     "Rarotonga",
     3,
     2
   ),
   LandTile(
-    "tiles/land/muroroa.png",
+    "tiles/land/muroroa.webp",
     "Muroroa",
     2,
     3
   ),
   LandTile(
-    "tiles/land/nauru.png",
+    "tiles/land/nauru.webp",
     "Nauru",
     2,
     3
   ),
   LandTile(
-    "tiles/land/tubuai.png",
+    "tiles/land/tubuai.webp",
     "Tubuai",
     2,
     2
   ),
   WaterTile(
-    "tiles/water/water_a.png",
+    "tiles/water/water_a.webp",
     4
   ),
   WaterTile(
-    "tiles/water/water_b.png",
+    "tiles/water/water_b.webp",
     4
   ),
   WaterTile(
-    "tiles/water/water_c.png",
+    "tiles/water/water_c.webp",
     4
   ),
   WaterTile(
-    "tiles/water/water_d.png",
+    "tiles/water/water_d.webp",
     3
   ),
   WaterTile(
-    "tiles/water/water_e.png",
+    "tiles/water/water_e.webp",
     3
   ),
   WaterTile(
-    "tiles/water/water_f.png",
+    "tiles/water/water_f.webp",
     3
   ),
   WaterTile(
-    "tiles/water/water_g.png",
+    "tiles/water/water_g.webp",
     3
   ),
   WaterTile(
-    "tiles/water/water_h.png",
+    "tiles/water/water_h.webp",
     3
   ),
   WaterTile(
-    "tiles/water/water_i.png",
+    "tiles/water/water_i.webp",
     2
   ),
   WaterTile(
-    "tiles/water/water_j.png",
+    "tiles/water/water_j.webp",
     2
   ),
   WaterTile(
-    "tiles/water/water_k.png",
+    "tiles/water/water_k.webp",
     2
   ),
   WaterTile(
-    "tiles/water/water_l.png",
+    "tiles/water/water_l.webp",
     0
   ),
   WaterTile(
-    "tiles/water/water_m.png",
+    "tiles/water/water_m.webp",
     0
   ),
   WaterTile(
-    "tiles/water/water_n.png",
+    "tiles/water/water_n.webp",
     0
   ),
   WaterTile(
-    "tiles/water/water_o.png",
+    "tiles/water/water_o.webp",
     0
   ),
   WaterTile(
-    "tiles/water/water_p.png",
+    "tiles/water/water_p.webp",
     0
   )
 )
