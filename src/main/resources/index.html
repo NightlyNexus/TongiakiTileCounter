@@ -57,8 +57,10 @@
       display: inline;
     }
 
-    .expansion {
-      display: inline-block;
+    .checkbox-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.25em;
     }
 
     @media (prefers-color-scheme: dark) {
@@ -89,8 +91,10 @@
   <br/><br/>
   <p>Water in pile: </p><b id="water-in-pile-count"></b>&nbsp;&nbsp;&nbsp;&nbsp;<p>Water used: </p><b id="water-used-count"></b>
   <br/><br/>
-  <input type="checkbox" id="sort-used">
-  <label for="sort-used">Move used to bottom</label>&nbsp;&nbsp;&nbsp;&nbsp;<button id="reset">Reset</button>
+  <label class="checkbox-label">
+    <input type="checkbox" id="sort-used">
+    <span>Move used to bottom</span>
+  </label>&nbsp;&nbsp;&nbsp;&nbsp;<button id="reset">Reset</button>
 </div>
 <div id="grid-container"></div>
 <script src="TongiakiTileCounter.js"></script>
